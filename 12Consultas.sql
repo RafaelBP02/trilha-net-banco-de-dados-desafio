@@ -54,3 +54,10 @@ ORDER BY Duracao
 SELECT Ano, COUNT(Ano) Quantidade FROM Filmes
 GROUP BY Ano
 ORDER BY Quantidade DESC
+
+
+-- Consulta 8
+-- Buscar os Atores do gênero masculino, retornando o PrimeiroNome, UltimoNome
+SELECT PrimeiroNome, UltimoNome, Genero FROM Atores
+WHERE Genero = 'M'
+ORDER BY PrimeiroNome, UltimoNome
