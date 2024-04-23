@@ -102,3 +102,21 @@ FROM
 	FilmesGenero
 	INNER JOIN Filmes F ON FilmesGenero.IdFilme = F.Id
 	INNER JOIN Generos G ON FilmesGenero.IdGenero = G.Id AND G.Genero = 'Mistério'
+ORDER BY 
+	F.Nome
+
+
+-- Consulta 12
+-- Buscar o nome do filme e os atores, trazendo o PrimeiroNome, UltimoNome e seu Papel
+SELECT 
+	F.Nome,
+	A.PrimeiroNome,
+	A.UltimoNome,
+	E.Papel
+	
+FROM 
+	ElencoFilme E
+	INNER JOIN Filmes F ON E.IdFilme = F.Id
+	INNER JOIN Atores A ON E.IdAtor = A.Id
+ORDER BY 
+	F.Nome
