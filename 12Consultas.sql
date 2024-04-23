@@ -45,3 +45,12 @@ ORDER BY Ano
 SELECT Nome, Ano, Duracao FROM Filmes
 WHERE Duracao > 100 AND Duracao < 150
 ORDER BY Duracao
+
+
+-- Consulta 7
+-- Buscar a quantidade de filmes lançadas no ano, agrupando por ano,
+-- ordenando pela duracao em ordem decrescente
+-- OBS.: nao faz sentido ordenar pela duracao nessa consulta da maneira q o bootcamp pede
+SELECT Ano, COUNT(Ano) Quantidade FROM Filmes
+GROUP BY Ano
+ORDER BY Quantidade DESC
